@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="/css/normalize.css">
   <!--
     application.css is where you put your styles
+
   -->
+  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Pacifico|Oswald|Oxygen|Roboto' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/application.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -19,13 +21,13 @@
 </head>
 <body>
   <div class="header">
-
+    <% if session_logged_in? %>
+      Welcome back, <%= session_current_user.first_name %>.
       <a href="/session/logout">Sign Out</a>
-
+      <% else %>
       <a href="/users/new">Register</a>
       <a href="/session/new">Sign In</a>
-
-  <a href="/secrets">Secret Stuff</a>
+      <% end %>
 </div>
   <%= yield %>
 </body>

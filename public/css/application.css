@@ -1,0 +1,19 @@
+body {
+  background-image: url("/image/denim.png")
+}
+
+.header {
+
+}
+
+.login { /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #283048 10%, #859398 90%); /* FF3.6+ */
+  /* IE10 */
+  /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #283048 10%, #859398 90%); /* W3C */
+ width: 30%; margin-left: auto; margin-right: auto; margin-top: 5%; padding: 50px; border-radius: 50px; text-align: center;}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: ghostwhite;
+}

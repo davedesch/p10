@@ -1,6 +1,7 @@
+<div class="login">
 <h1>Login</h1>
 <form action="/session" method="post">
-  Name:<br>
+  Email:<br>
   <input type="text" name="email">
   <br>
   Password:<br>
@@ -8,3 +9,7 @@
   <br>
   <input type="submit" value="Submit">
 </form>
+<div class="errors">
+  <%= @session_error %>
+</div>
+</div>

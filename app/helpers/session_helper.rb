@@ -58,7 +58,7 @@ helpers do
     begin
       if session_current_user
         if session[:redirect_target].blank?
-          "/#{session_current_user.username}"
+          "/#{session_current_user.username.downcase}"
         else
           session[:redirect_target]
         end

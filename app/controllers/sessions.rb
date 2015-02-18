@@ -12,3 +12,7 @@ post '/session' do
     erb :'session/new'
   end
 end
+
+get '/session/logout' do
+  session_logout_and_redirect
+end
