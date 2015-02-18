@@ -1,5 +1,7 @@
-<h1>PICSHARE</h1>
-<% @picture.each do |picture| %>
-  <h3><%= picture.caption %><h3>
-    <p><img src="<%= picture.url %>" ></p>
-    <% end %>
+  <h1>PICSHARE</h1>
+  <% @picture.each do |picture| %>
+<div class="picshare">
+  <h3><%= picture.caption %></h3>
+  <p><img src="<%= picture.url %>" ></p>
+</div>
+  <% end %>
