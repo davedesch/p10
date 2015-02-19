@@ -17,6 +17,10 @@ gem 'shotgun'
 
 gem 'bcrypt'
 
+gem 'sinatra_auth_github'
+
+gem 'will_paginate', '~>3.0.5'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'

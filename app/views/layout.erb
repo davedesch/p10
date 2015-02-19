@@ -21,14 +21,19 @@
 </head>
 <body>
   <div class="header">
-    <% if session_logged_in? %>
-      Welcome back, <%= session_current_user.first_name %>.
-      <a href="/session/logout">Sign Out</a>
-      <% else %>
-      <a href="/users/new">Register</a>
-      <a href="/session/new">Sign In</a>
-      <% end %>
-</div>
+  <% if session_logged_in? %>
+  Welcome back, <%= session_current_user.first_name %>.
+    <a id="logout" href="/session/logout">Sign Out</a>
+    <a href="/<%= session_current_user.username %>/distractions">Distractions</a>
+    <a href="/<%= session_current_user.username %>/productivity">Productivity</a>
+    <a href="/<%= session_current_user.username %>">Home</a>
+  <% else %>
+
+    <a href="/users/new">Register</a>
+    <a href="/session/new">Sign In</a>
+  </div>
+    <% end %>
+
   <%= yield %>
 </body>
 </html>
