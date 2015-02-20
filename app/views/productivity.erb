@@ -1,12 +1,24 @@
 <h1>Let's get productive!</h1>
-<div><a class="auth_link" href="#auth_authorize_link">Login to your GitHub</a></div>
+<div>
+<p>
+  Enter your username to get your repo!
+  <form id="gitname" class="getgit" action="/productivity/new" method="get">
+    Git Username:<br>
+    <input type="text" name="gituser">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+  </p>
+  <div class="gitresults"><p></p></div>
+
+</div>
 
 <div id="resourcehead">
-<h1>Helpful Resources</h1>
+  <h1>Helpful Resources</h1>
 </div>
 <div class="resources">
 
   <% @resource.each do |resource| %>
   <center><p id="resourcelist"><a href="<%= resource.url %>"><%= resource.title %></a></p></center>
-    <% end %>
-  </div>
+  <% end %>
+</div>

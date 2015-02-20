@@ -9,6 +9,14 @@ get '/:user/productivity' do
   erb :productivity
 end
 
+get '/productivity/new' do
+  @gituser = params[:gituser]
+  response = Github.repos.list user: @gituser
+  response.to_json
+
+  # erb :productivity
+end
+
 get '/:user/distractions' do
   erb :'distractions/distractions'
 end
