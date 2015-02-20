@@ -17,7 +17,7 @@ gem 'shotgun'
 
 gem 'bcrypt'
 
-gem 'sinatra_auth_github'
+gem 'github_api'
 
 gem 'will_paginate', '~>3.0.5'
 

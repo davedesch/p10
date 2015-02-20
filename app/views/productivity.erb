@@ -1,2 +1,12 @@
 <h1>Let's get productive!</h1>
 <div><a class="auth_link" href="#auth_authorize_link">Login to your GitHub</a></div>
+
+<div id="resourcehead">
+<h1>Helpful Resources</h1>
+</div>
+<div class="resources">
+
+  <% @resource.each do |resource| %>
+  <center><p id="resourcelist"><a href="<%= resource.url %>"><%= resource.title %></a></p></center>
+    <% end %>
+  </div>

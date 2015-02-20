@@ -22,7 +22,7 @@
 <body>
   <div class="header">
   <% if session_logged_in? %>
-  Welcome back, <%= session_current_user.first_name %>.
+  <div id="welcome">Welcome back, <%= session_current_user.first_name %>.</div>
     <a id="logout" href="/session/logout">Sign Out</a>
     <a href="/<%= session_current_user.username %>/distractions">Distractions</a>
     <a href="/<%= session_current_user.username %>/productivity">Productivity</a>

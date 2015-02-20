@@ -1,0 +1,22 @@
+<div class="login"><img src="/image/12.svg"><img id="squirrellogo" src="/image/122.svg"><img src="/image/121.svg"></div>
+<div class="register">
+<center><h1>Let's Get You Registered</h1></center>
+<center><form action="/users/new" method="post">
+  Email:<br>
+  <input type="text" name="email">
+  <br>
+  Password:<br>
+  <input type="text" name="password">
+  <br>
+  First Name:<br>
+  <input type="text" name="first_name">
+  <br>
+  Username:<br>
+  <input type="text" name="username">
+  <br>
+  <input type="submit" value="Submit">
+</form></center>
+<div class="errors">
+  <%= @session_error %>
+</div>
+</div>

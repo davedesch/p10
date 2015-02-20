@@ -67,11 +67,10 @@ h1 {
 }
 
 .header a {
-    width: 10%;
     margin-left: auto;
     margin-right: auto;
     color: ghostwhite;
-    border: solid;
+    /* border: solid; */
     font-size: 35px;
     /* padding: 10px; */
     display: inline-block;
@@ -85,17 +84,23 @@ h1 {
     padding-right: 5%;
 }
 
+.header a:hover {
+  color:  #FF4136;
+  text-decoration: underline;
+}
+
 .header {
     /* background: -webkit-linear-gradient(90deg, #485563 10%, #29323c 90%); */ /* Chrome 10+, Saf5.1+ */
   background:    -moz-linear-gradient(90deg, #485563 10%, #29323c 90%); /* FF3.6+ */
   background:     -ms-linear-gradient(90deg, #485563 10%, #29323c 90%); /* IE10 */
   background:      -o-linear-gradient(90deg, #485563 10%, #29323c 90%); /* Opera 11.10+ */
-  
-    /* background:         linear-gradient(90deg, #485563 10%, #29323c 90%); */ /* W3C */
+
+    background:         linear-gradient(90deg, #485563 10%, #29323c 90%); /* W3C */
     padding: 0px;
     height: 55px;
     margin-bottom: 5%;
     text-align: center;
+    color: ghostwhite;
 }
 
 .login {
@@ -128,4 +133,102 @@ form {
 input {
   color: black;
   margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+
+    /* display: inline-block; */
+    width: 90%;
+}
+
+li {
+  float: center;
+  display: inline;
+  text-align: center;
+}
+
+div.resources a{
+  float: left;
+  width: 34%;
+  font-size: 23px;
+  text-align: left;
+}
+
+div.resources {
+  margin-left: auto;
+  margin-right: auto:
+  width; 20%;
+
+}
+
+p#resourcelist {
+  margin-left: auto;
+  /* margin-right: auto; */
+  width: 80%}
+}
+
+div.resourcehead {
+  margin-top: 5%;
+}
+
+.distractionnav {
+  margin-top: 10%;
+
+}
+.distractionnav a{
+    text-decoration: none;
+  color: ghostwhite;
+  font-size: 50px;
+
+    margin-bottom: 1%;
+
+    margin-top: 5%;
+    display: inline-block;
+  border: solid;
+  padding: 30px;
+  vertical-align: middle;
+
+    width: 25%;
+  background: -webkit-linear-gradient(90deg, #485563 10%, #29323c 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #485563 10%, #29323c 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #485563 10%, #29323c 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #485563 10%, #29323c 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #485563 10%, #29323c 90%); /* W3C */
+
+
+
+  /* opacity: 0.8; */
+  border-style: solid;
+  border-width: 3px;
+  border-color: white;
+    display: block;
+}
+
+#resourcehead {
+  margin-top: 10%;
+}
+
+#welcome {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-left; 10px;
+  float: left;
+}
+
+#indexmessage {
+  font-family: 'Roboto', sans-serif;
+  font-size: 90px;
+  opacity: 0.8;
+}
+
+.register {
+  /* width: 50%; */
+  /* margin-left: 25%; */
+  /* margin-right: 25%; */
+}
+
+.errors {
+  color: ghostwhite;
+  font-size: 25px;
 }

@@ -1,4 +1,8 @@
 helpers do
+
+
+
+  # THIS IS FOR THE ENTIRE SITE
   def session_logged_in?
     !session_current_user.nil?
   end
@@ -69,4 +73,10 @@ helpers do
       session.delete :redirect_target
     end
   end
+
+
+  def create
+    new_user = User.create(username: params[:username], email: params[:email], password: params[:password], first_name: params[:first_name])
+  end
+
 end

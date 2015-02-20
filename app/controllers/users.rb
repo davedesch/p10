@@ -5,6 +5,7 @@ get '/:user' do
 end
 
 get '/:user/productivity' do
+  @resource = Resource.all
   erb :productivity
 end
 
@@ -18,5 +19,10 @@ get '/:user/distractions/picshare' do
 end
 
 get '/users/new' do
-  erb :user
+  erb :'/users/new'
+end
+
+post '/users/new' do
+  create
+  erb :'session/new'
 end
