@@ -232,3 +232,18 @@ div.resourcehead {
   color: ghostwhite;
   font-size: 25px;
 }
+
+.gitresults img {
+  height: 140px;
+  border-radius: 150px;
+
+}
+
+.submitnewgif {
+border: solid;
+position: fixed;
+top: 250px;
+left: 25px;
+padding: 1%;
+background:         linear-gradient(90deg, #485563 10%, #29323c 90%);
+}

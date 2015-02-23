@@ -22,7 +22,7 @@ get '/:user/distractions' do
 end
 
 get '/:user/distractions/picshare' do
-  @picture = Picture.all
+  @picture = Picture.all.order('created_at DESC')
   erb :'distractions/picshare'
 end
 
@@ -33,4 +33,12 @@ end
 post '/users/new' do
   create
   erb :'session/new'
+end
+
+post '/picshare' do
+  Picture.create(url: params[:url], caption: params[:caption])
+
+
+
+  redirect "#{session_current_user.username}/distractions/picshare"
 end

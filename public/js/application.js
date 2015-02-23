@@ -2,7 +2,7 @@ $(document).ready(function() {
     console.log('working');
 
   $('#gitname').submit(function(event){
-    alert("dave is great");
+    // alert("dave is great");
     event.preventDefault();
     var gitname = $('#gitname').serialize();
     console.log(gitname);
@@ -13,9 +13,15 @@ $(document).ready(function() {
     })
     .done(function(response) {
       var avi_url = response[0].owner.avatar_url;
-      $('.gitresults').html("<img src='" + avi_url + "'>");
+      var repo_url = response[0].owner.html_url;
+      var git_username = response[0].owner.login;
+      $('.gitresults').html("<h3>This is " + git_username + "!</h3><img class='gitpicture' src='" + avi_url + "'><br><a href='" + repo_url + "'>Go to the Git!</a>");
+
+        // <a href='" + repo_url + "'><br><img class='gitpicture' src='" + avi_url + "'>Go To The Git</a>");
+
+      // $('.gitresults').html("< a href='")
       console.log("success");
-      console.log(response[0].owner.avatar_url);
+      console.log(response[0].owner.login);
     })
     .fail(function() {
       console.log("error");

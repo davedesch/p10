@@ -1,7 +1,20 @@
+  <div class="submitnewgif">
+    <h1>Add something awesome.</h1>
+    <p><form action="/picshare" method="post">
+      GIF Url:<br>
+      <input type="text" name="url">
+      <br>
+      Caption:<br>
+      <input type="text" name="caption">
+      <br>
+      <input type="submit" value="Submit">
+    </form></p>
+  </div>
+
   <center><h1>PicShare</h1></center>
   <% @picture.each do |picture| %>
-<div class="picshare">
-  <h3><%= picture.caption %></h3>
-  <p><img src="<%= picture.url %>" ></p>
-</div>
+  <div class="picshare">
+    <h3><%= picture.caption %></h3>
+    <p><img src="<%= picture.url %>" ></p>
+  </div>
   <% end %>
